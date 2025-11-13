@@ -1,8 +1,13 @@
-CC = gcc
-CFLAGS = -Wall -Wextra
+ITOG=maim
+OBJ=main.o
+ISH=main.cpp
+FLAGS= -Wall -g
 
-calculator: calculator.c
-	$(CC) $(CFLAGS) -o calculator calculator.c
+$(ITOG): $(OBJ)
+    g++ $(FLAGS) $(OBJ) -o $(ITOG)
+
+$(OBJ): $(ISH)
+    g++ $(FLAGS) -c $(ISH) -o $(OBJ)
 
 clean:
-	rm -f calculator *.o
+    rm -f *.o $(ITOG)
