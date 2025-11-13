@@ -1,10 +1,2 @@
-*.o
-*.exe
-*.out
-*.dll
-*.tmp
-*.log
-build/
-dist/
-*.vscode/
-*.idea/
+main.0
+main
